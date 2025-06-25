@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Florence Catering Services</title>
+    <link rel="stylesheet" href="/css/catering_menu.css">
+</head>
+<body>
+        <div class="content">
+            <div class="title">
+                <p>Catering Rates</p>
+            </div>
+            <div class="rates">
+                <div class="rate">
+                    <p>BASIC</p>
+                    <p>₱700.00</p>
+                </div>
+                <div class="rate">
+                    <p>STANDARD</p>
+                    <p>₱850.00</p>
+                </div>
+                <div class="rate">
+                    <p>PREMIUM</p>
+                    <p>₱1000.00</p>
+                </div>
+            </div>
+            <p class="note">ALL PACKAGES ARE PER PAX AND A MINIMUM OF 100PAX</p>
+            <div class="menu">
+                <div class="column">
+                    <p>Beef or Pork (1)</p>
+                    <p>Chicken (1)</p>
+                    <p>Fish (1)</p>
+                    <p>Vegetable (1)</p>
+                    <p>Pasta (1)</p>
+                    <p>Dessert (1)</p>
+                    <p>Beverage (1)</p>
+                </div>
+                <div class="column">
+                    <p>Soup (1)</p>
+                    <p>Salad (1)</p>
+                    <p>Beef or Pork (1)</p>
+                    <p>Chicken (1)</p>
+                    <p>Fish (1)</p>
+                    <p>Vegetable (1)</p>
+                    <p>Pasta (1)</p>
+                    <p>Dessert (1)</p>
+                    <p>Beverage (1)</p>
+                </div>
+                <div class="column">
+                    <p>Soup (1)</p>
+                    <p>Salad (1)</p>
+                    <p>Beef (1)</p>
+                    <p>Pork (1)</p>
+                    <p>Chicken (1)</p>
+                    <p>Fish (1)</p>
+                    <p>Vegetable (1)</p>
+                    <p>Pasta (1)</p>
+                    <p>Dessert (2)</p>
+                    <p>Beverage (1)</p>
+                </div>
+            </div>
+            <div class="inclusions">
+                <p>Inclusions:</p>
+                <ul>
+                    <li>COMPLETE BUFFET SET -UP</li>
+                    <li>USE OF COMPLETE SET OF ELEGANT CUTLERY, GLASSWARE AND CHINAWARE</li>
+                    <li>UNIFORMED WAITSTAFF AND FOOD ATTENDANTS</li>
+                    <li>FIVE(5) HOURS OF SERVICE FROM START OF THE EVENT</li>
+                    <li>PLATED SERVICE FOR PRINCIPAL SPONSORS (TABLES AND CHAIRS NOT INCLUDED)</li>
+                </ul>
+            </div>
+            <div class="payment-details">
+                <p>Payment details:</p>
+                <ol>
+                    <li>₱5,000 RESERVATION FEE (NON-REFUNDABLE) TO RESERVE THE DATE</li>
+                    <li>50% DOWN PAYMENT 1 MONTH BEFORE THE EVENT</li>
+                    <li>FULL PAYMENT 1 WEEK BEFORE THE EVENT</li>
+                </ol>
+            </div>
+        </div>
+
+    <div class="menu">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>20-25pax<br>(MEDIUM)</th>
+                    <th>45-50pax<br>(LARGE)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3" class="category">BEEF</td>
+                </tr>
+                {{#each beefItems}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.mediumPrice}}</td>
+                    <td>{{this.largePrice}}</td>
+                </tr>
+                {{/each}}
+
+                <tr>
+                    <td colspan="3" class="category">PORK</td>
+                </tr>
+                {{#each porkItems}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.mediumPrice}}</td>
+                    <td>{{this.largePrice}}</td>
+                </tr>
+                {{/each}}
+
+                <tr>
+                    <td colspan="3" class="category">CHICKEN</td>
+                </tr>
+                {{#each chickenItems}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.mediumPrice}}</td>
+                    <td>{{this.largePrice}}</td>
+                </tr>
+                {{/each}}
+
+                <tr>
+                    <td colspan="3" class="category">FISH/SEAFOOD</td>
+                </tr>
+                {{#each seafoodItems}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.mediumPrice}}</td>
+                    <td>{{this.largePrice}}</td>
+                </tr>
+                {{/each}}
+
+                <tr>
+                    <td colspan="3" class="category">VEGETABLE</td>
+                </tr>
+                {{#each vegetableItems}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.mediumPrice}}</td>
+                    <td>{{this.largePrice}}</td>
+                </tr>
+                {{/each}}
+
+                <tr>
+                    <td colspan="3" class="category">PASTA/NOODLES</td>
+                </tr>
+                {{#each pastaItems}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.mediumPrice}}</td>
+                    <td>{{this.largePrice}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

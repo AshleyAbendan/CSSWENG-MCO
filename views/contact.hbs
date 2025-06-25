@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Us</title>
+  <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+  <div class="contact-container">
+    <div class="contact-form">
+      <form action="/contact" method="post" onsubmit="return showAlert()">
+            <div class="contact-info">
+              <h1>Book Us</h1>
+            <div class="message">
+            <p><strong>Please fill out the form to send us an email.</strong></p>    
+      </div>
+      <div class="image-container">
+      </div>
+    </div>
+        <div>
+          <br>
+          <label for"firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div>
+          <label for"lastName">Surname:</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div>
+          <label for"email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for"phone">Phone No.:</label>
+          <input type="tel" id="phone" name="phone" pattern="(\+63|0)9\d{9}" required>
+        </div>
+        <div>
+          <label for"facebook">Facebook link:</label>
+          <input type="url" id="facebook" name="facebook">
+        </div>
+        <div>
+          <label for"subject">Subject:</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+        <div>
+          <label for"message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    function showAlert() {
+      alert("Form submitted successfully!");
+      return true; // Proceed with form submission
+    }
+  </script>
+
+</body>
+</html>

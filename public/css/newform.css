@@ -1,0 +1,54 @@
+.client-body {
+    font-family: Arial, sans-serif;
+    background-color: #F6F4F3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.client-form {
+    background-color: #F6F4F3;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+
+.client-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.client-form input[type="text"],
+.client-form input[type="email"],
+.client-form input[type="tel"],
+.client-form input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #D1C8C1;
+    font-weight: bolder;
+    background-color: #D1C8C1;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.client-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #d1c8c1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.client-form button:hover {
+    background-color: #bbb;
+}

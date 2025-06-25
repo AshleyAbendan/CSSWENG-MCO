@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f4f3;
+  align-self: center;
+}
+
+.content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.column {
+  flex: 1; /* Each column will take up an equal amount of space */
+  padding: 0 10px; /* Optional: Add some padding between columns */
+}
+
+.column p {
+  margin: 10px 0; /* Optional: Add margin between paragraphs within columns */
+}
+
+.content .title {
+  text-align: center;
+  background-color: #c8b28c;
+  padding: 10px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.content .title p {
+  font-size: 24px;
+  color: white;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.rates {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.rate p:first-child {
+  font-weight: bold;
+}
+
+.note {
+  text-align: center;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.menu {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+h1 {
+  text-align: center;
+  font-family: 'Brush Script MT', cursive;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+td {
+  border-bottom: 1px solid #d1c8c1;
+}
+
+.category {
+  font-weight: bold;
+  background-color: #c8b28c;
+  border-bottom: 2px solid #ddd;
+  color: #FFFFFF;
+}
+
+.name-image {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  border-radius: 30px;
+}
+
+.stations li strong{
+ color: #aa8a40;
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.about-us img {
+  width: 300px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.about-us-text {
+  max-width: 600px;
+}
+
+.about-us-text h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.about-us-text p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}

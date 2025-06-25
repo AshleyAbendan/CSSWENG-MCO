@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Florence</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 50%;
+            max-width: 50%;
+            padding-top: 80px;
+            
+        }
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="grid">
+            <div class="grid-home-1"><img src="/images/home_1.jpg" alt="Home Image 1" onclick="openModal(this)"></div>
+            <div class="grid-home-2"><img src="/images/home_2.png" alt="Home Image 2" onclick="openModal(this)"></div>
+            <div class="grid-home-3"><img src="/images/home_3.png" alt="Home Image 3" onclick="openModal(this)"></div>
+            <div class="grid-home-4"><img src="/images/home_4.jpg" alt="Home Image 4" onclick="openModal(this)"></div>
+        </div>
+    </main>
+    <div class="row"> 
+        <div class="column">
+            <img src="/images/menu_2.jpg" onclick="openModal(this)">
+            <img src="/images/menu_3.jpg" onclick="openModal(this)">
+            <img src="/images/menu_4.jpg" onclick="openModal(this)">
+            <img src="/images/menu_5.jpg" onclick="openModal(this)">
+            <img src="/images/menu_6.jpg" onclick="openModal(this)">
+            <img src="/images/menu_7.jpg" onclick="openModal(this)">
+        </div>
+        <div class="column">
+            <img src="/images/menu_8.jpg" onclick="openModal(this)">
+            <img src="/images/menu_9.jpg" onclick="openModal(this)">
+            <img src="/images/menu_10.jpg" onclick="openModal(this)">
+            <img src="/images/menu_11.jpg" onclick="openModal(this)">
+            <img src="/images/menu_12.jpg" onclick="openModal(this)">
+            <img src="/images/menu_14.jpg" onclick="openModal(this)">
+        </div>
+        <div class="column">
+            <img src="/images/menu_16.jpg" onclick="openModal(this)">
+            <img src="/images/menu_17.jpg" onclick="openModal(this)">
+            <img src="/images/menu_18.jpg" onclick="openModal(this)">
+            <img src="/images/menu_19.jpg" onclick="openModal(this)">
+            <img src="/images/menu_20.jpg" onclick="openModal(this)">
+            <img src="/images/menu_21.jpg" onclick="openModal(this)">
+        </div>
+        <div class="column">
+            <img src="/images/menu_22.jpg" onclick="openModal(this)">
+            <img src="/images/menu_23.jpg" onclick="openModal(this)">
+            <img src="/images/menu_24.jpg" onclick="openModal(this)">
+            <img src="/images/menu_25.jpg" onclick="openModal(this)">
+            <img src="/images/menu_26.jpg" onclick="openModal(this)">
+            <img src="/images/menu_27.jpg" onclick="openModal(this)">
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        function openModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+
+        <!-- About Us Section -->
+    <section id="about-us" class="about-us">
+        <img src="/images/owner.jpg" alt="Owner of De Florence Catering Services">
+        <div class="about-us-text">
+            <h2>About Us</h2>
+            <p>De Florence Catering Services is a catering business founded in 2005 by sisters Zenaida Guiam and Betty Guiam-Lim. Now managed by the third generation, Jon Kevin Lim Pilea, De Florence has established itself as a premier provider of catering solutions in Pampanga. Specializing in food orders, event planning, and equipment rentals, De Florence primarily serves Pampanga but extends its services to Bataan, Tarlac, and nearby provinces.</p>
+            <p>De Florence Catering Services excels in creating memorable events through its Kapampangan food dishes and reliable rental services for tables, chairs, and other essential equipment. With a commitment to quality and customer satisfaction, De Florence ensures that every event, whether a small gathering or a large celebration, is executed flawlessly.</p>
+            <p>By leveraging years of experience and a passion for hospitality, the team at De Florence continues to innovate and adapt to the evolving needs of its clients, maintaining its position as a trusted name in the catering industry.</p>
+        </div>
+    </section>
+
+</body>
+</html>

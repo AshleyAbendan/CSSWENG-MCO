@@ -1,0 +1,98 @@
+main body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.column {
+    width: 25%; 
+}
+
+.dashboard-container {
+    background-color: #F6F4F3;
+    padding-top: 15px;
+    margin-bottom: 50px;
+}
+
+.header {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.search-form {
+    background-color: #F6F4F3;
+    padding: 10px; 
+}
+
+button {
+    background-color: #d1c8c1;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: "Times New Roman", sans-serif;
+}
+
+input {
+    background-color: #d1c8c1;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.add-client-link {
+    background-color: #F6F4F3;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.submit {
+    font-family: "Times New Roman", sans-serif;
+}
+
+h2 {
+    margin-left: 10px;
+}
+
+table {
+    background-color: #d1c8c1;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px;
+}
+
+#sortSelect {
+    background-color: #F6F4F3;
+    
+}
+
+.action-links {
+    background-color: #d1c8c1;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px;
+}

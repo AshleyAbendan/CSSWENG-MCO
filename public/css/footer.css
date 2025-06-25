@@ -1,0 +1,124 @@
+/* footer.css */
+
+.footer {
+  background-color: #c8b28c;
+  color: #000000;
+  padding: 16px 0;
+  position: relative; /* Ensures footer doesn't overlap main content */
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between; /* Space out the sections */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  padding: 0 15px; /* Add some padding */
+  flex-wrap: wrap; /* Allows wrapping for better responsiveness */
+  font-family: 'Times New Roman', serif;
+}
+
+.footer-section {
+  flex: 1; /* Each section takes equal space */
+  text-align: center; /* Center-align the content */
+  padding: 10px; /* Add some padding for spacing */
+  font-family: 'Times New Roman', serif;
+}
+
+.footer-left {
+  text-align: left; /* Align text to the left for the left section */
+  font-family: 'Times New Roman', serif;
+}
+
+.footer-middle {
+  text-align: center; /* Center-align text for the middle section */
+  font-family: 'Times New Roman', serif;
+}
+
+.footer-right {
+  text-align: right; /* Align text to the right for the right section */
+  font-family: 'Times New Roman', serif;
+}
+
+.footer-text {
+  margin: 5px 0; /* Ensure spacing between text lines */
+  font-weight: bold; /* Make the text bold */
+  font-family: 'Times New Roman', serif;
+}
+
+.footer-text a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
+  font-family: 'Times New Roman', serif;
+}
+
+.footer-text a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #007bff; /* Change text color on hover */
+  font-family: 'Times New Roman', serif;
+}
+
+
+.footer-right .footer-text {
+  font-size: 16px; /* Adjust the font size to fit the longer address */
+  word-wrap: break-word; /* Ensure long words wrap properly */
+  font-family: 'Times New Roman', serif;
+}
+
+.footer-img {
+  max-width: 100px; /* Adjust width to fit within the footer, change as needed */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s, opacity 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer a:hover .footer-img {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  opacity: 0.8; /* Slightly fade the image on hover */
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth transition for hover effect */
+  font-family: 'Times New Roman', serif;
+}
+
+.footer-link:hover {
+  color: #ddd; /* Slight color change on hover */
+  font-family: 'Times New Roman', serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#top {
+  flex: 1 0 auto; /* Ensures that the main content grows and takes available space */
+}
+
+footer {
+  flex-shrink: 0; /* Footer doesn't shrink and is at the bottom */
+}
+
+/* Media query to handle responsiveness */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column; /* Stack sections vertically on small screens */
+    align-items: center; /* Center-align all sections */
+  }
+
+  .footer-left, .footer-middle, .footer-right {
+    text-align: center; /* Center-align text on small screens */
+    margin-bottom: 10px; /* Add spacing between stacked sections */
+    font-family: 'Times New Roman', serif;
+  }
+
+  .footer-right .footer-text {
+    font-size: 16px; /* Further reduce font size for smaller screens */
+    font-family: 'Times New Roman', serif;
+  }
+}

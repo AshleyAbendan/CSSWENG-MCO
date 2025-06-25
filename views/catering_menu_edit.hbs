@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Catering Menu Prices</title>
+    <link rel="stylesheet" href="/css/catering_edit.css"> <!-- Replace with your CSS file path -->
+</head>
+<body>
+    <div class="menu-edit">
+        <h1>Edit Catering Menu Prices</h1>
+
+        <form action="/update-menu" method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Item Name</th>
+                        <th>20-25pax (Medium)</th>
+                        <th>45-50pax (Large)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each beefItems}}
+                    <tr>
+                        <td>{{this.category}}</td>
+                        <td>{{this.name}}</td>
+                        <td><input type="number" name="mediumPrice_{{this._id}}" value="{{this.mediumPrice}}"></td>
+                        <td><input type="number" name="largePrice_{{this._id}}" value="{{this.largePrice}}"></td>
+                    </tr>
+                    {{/each}}
+
+                    {{#each porkItems}}
+                    <tr>
+                        <td>{{this.category}}</td>
+                        <td>{{this.name}}</td>
+                        <td><input type="number" name="mediumPrice_{{this._id}}" value="{{this.mediumPrice}}"></td>
+                        <td><input type="number" name="largePrice_{{this._id}}" value="{{this.largePrice}}"></td>
+                    </tr>
+                    {{/each}}
+
+                    {{#each chickenItems}}
+                    <tr>
+                        <td>{{this.category}}</td>
+                        <td>{{this.name}}</td>
+                        <td><input type="number" name="mediumPrice_{{this._id}}" value="{{this.mediumPrice}}"></td>
+                        <td><input type="number" name="largePrice_{{this._id}}" value="{{this.largePrice}}"></td>
+                    </tr>
+                    {{/each}}
+
+                    {{#each seafoodItems}}
+                    <tr>
+                        <td>{{this.category}}</td>
+                        <td>{{this.name}}</td>
+                        <td><input type="number" name="mediumPrice_{{this._id}}" value="{{this.mediumPrice}}"></td>
+                        <td><input type="number" name="largePrice_{{this._id}}" value="{{this.largePrice}}"></td>
+                    </tr>
+                    {{/each}}
+
+                    {{#each vegetableItems}}
+                    <tr>
+                        <td>{{this.category}}</td>
+                        <td>{{this.name}}</td>
+                        <td><input type="number" name="mediumPrice_{{this._id}}" value="{{this.mediumPrice}}"></td>
+                        <td><input type="number" name="largePrice_{{this._id}}" value="{{this.largePrice}}"></td>
+                    </tr>
+                    {{/each}}
+
+                    {{#each pastaItems}}
+                    <tr>
+                        <td>{{this.category}}</td>
+                        <td>{{this.name}}</td>
+                        <td><input type="number" name="mediumPrice_{{this._id}}" value="{{this.mediumPrice}}"></td>
+                        <td><input type="number" name="largePrice_{{this._id}}" value="{{this.largePrice}}"></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <button type="submit">Update Prices</button>
+        </form>
+        <a href="/admin_dashboard" class="back-link">Go Back to Admin Dashboard</a>
+    </div>
+</body>
+</html>

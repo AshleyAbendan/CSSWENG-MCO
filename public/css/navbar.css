@@ -1,0 +1,122 @@
+/* CSS for Navigation Bar */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 1rem; /* Padding around the navbar */
+    border-bottom: 1px solid #e0e0e0; /* Light grey border at the bottom */
+    background-image: url('/images/navbar_bg.png'); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    position: relative; /* Ensure navbar is positioned relative */
+    z-index: 1000; /* Increase z-index of navbar */
+    font-size: 20px;
+    font-family: 'Times New Roman', serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* You can adjust the width as needed */
+    margin: 0 auto;
+}
+
+.logo {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo-img {
+    width: 250px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+}
+
+.options {
+    display: flex;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 1rem; /* Spacing between nav items */
+    position: relative; /* Ensure nav-item is positioned relative */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding: 0.5rem 1rem; /* Padding inside each link */
+    border-radius: 0.25rem; /* Slightly rounded corners */
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #e0e0e0; /* Light grey background on hover */
+}
+
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .options {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Styles for the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    z-index: 1100; /* Ensure dropdown-menu is above other elements */
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

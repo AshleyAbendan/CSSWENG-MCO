@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.18.0",
+    "hbs": "^4.2.0",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.3",
+    "nodemailer": "^6.9.13",
+    "uuid": "^10.0.0"
+  }
+}

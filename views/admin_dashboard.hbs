@@ -1,0 +1,80 @@
+<!-- admin_dashboard.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Catering Menu Prices</title>
+    <link rel="stylesheet" href="/css/admin_dashboard.css">
+</head>
+<main>
+    <div class="dashboard-container">
+        <h2>Admin Dashboard</h2>
+
+        <form action="/admin_logout" method="POST">
+            <button type="submit" class="logout-button">Logout</button>
+        </form>
+
+        <form id="searchForm" action="/admin_dashboard" method="GET" class="search-form">
+            <input type="text" name="query" placeholder="Search by name, date, occasion..." required>
+            <button type="submit">Search</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="column">ID</th>
+                    <th class="column">Name</th>
+                    <th class="column">Date</th>
+                    <th class="column">Occasion</th>
+                    <th class="column">Status</th>
+                    <th class="column">Sort
+                    <div class="sort-container">
+                        <select id="sortSelect" name="sort">
+                            <option value="">Choose...</option>
+                            <option value="date">Date</option>
+                            <option value="name">Name</option>
+                            <option value="occasion">Occasion</option>
+                            <option value="status">Status</option>
+                            <option value="id">ID</option>
+                        </select>
+                    </div>                        
+                    </th>  
+                </tr>
+            </thead>
+            <tbody>
+                {{#each contacts}}
+                <tr>
+                    <td class="column">{{this.eventId}}</td>
+                    <td class="column">{{this.fullName}}</td>
+                    <td class="column">{{this.date}}</td>
+                    <td class="column">{{this.occasion}}</td>
+                    <td class="column">{{this.status}}</td>
+                    <td class="column">
+                        <div class="action-links">
+                            <a href="/admin/edit-event/{{this._id}}">Edit</a>
+                            <a href="#" onclick="confirmDelete('{{this._id}}')">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <a href="/admin/add-client" class="add-client-link">Add Client</a>
+    </div>
+</main>
+
+<script>
+    document.getElementById('sortSelect').addEventListener('change', function() {
+        const sortValue = document.getElementById('sortSelect').value;
+        const searchParams = new URLSearchParams(window.location.search);
+        searchParams.set('sort', sortValue);
+        window.location.href = `/admin_dashboard?${searchParams.toString()}`;
+    });
+
+    function confirmDelete(eventId) {
+        if (confirm('Are you sure you want to delete this event?')) {
+            window.location.href = `/admin/delete-event/${eventId}`;
+        }
+    }    
+</script>

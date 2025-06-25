@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="/css/faqs.css">
+</head>
+<body>
+    <main>
+        <section class="faqs">
+            <h1>Frequently Asked Questions</h1>
+            <div class="faq">
+                <h2>What services do you offer?</h2>
+                <p class="answer">We offer a wide range of catering services for all occasions, including weddings, corporate events, and private parties.</p>
+            </div>
+            <div class="faq">
+                <h2>How can I place an order?</h2>
+                <p class="answer">You can place an order by contacting us through our website or by calling our customer service line.</p>
+            </div>
+            <div class="faq">
+                <h2>Do you offer vegetarian options?</h2>
+                <p class="answer">Yes, we offer a variety of vegetarian and vegan options. Please let us know your dietary preferences when placing your order.</p>
+            </div>
+            <div class="faq">
+                <h2>Do you have a physical office where we can inquire?</h2>
+                <p class="answer">Yes, you may visit and inquire at Unit B4 2/4 Kingsborough Commercial Complex San Fernando, Pampanga (beside SnR Pampanga).</p>
+            </div>
+            <div class="image-container">
+                <img src="/images/map.png" alt="Image Description" class="center-image">
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faqs = document.querySelectorAll(".faq");
+
+            faqs.forEach(faq => {
+                faq.addEventListener("click", function() {
+                    const answer = faq.querySelector(".answer");
+                    faq.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

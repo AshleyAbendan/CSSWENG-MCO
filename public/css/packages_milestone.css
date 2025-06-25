@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    align-self: center;
+}
+
+.flyer-container {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1000px;
+    align-self: center;
+}
+
+.left-section {
+    width: 45%;
+    padding: 20px;
+    text-align: center;
+}
+
+.left-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.left-section h3 {
+    font-size: 1.2em;
+    color: #888;
+    margin-top: 0;
+}
+
+.left-section h4 {
+    font-size: 1em;
+    color: #888;
+    margin-top: 0;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+.name-image {
+    width: 110%;
+    border-radius: 30px;
+}
+.main-image {
+    width: 105%;
+    border-radius: 30px;
+}
+
+.right-section {
+    width: 55%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fdfbe9;
+    border: 30px solid white;
+    border-radius: 50px;
+}
+
+.column {
+    width: 48%; /* Adjust width to fit within right-section */
+}
+
+.content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+    color: #666;
+    font-size: 1em;
+}
+
+.price {
+    background-color: #aa8a40;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+}
